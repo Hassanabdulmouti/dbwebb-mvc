@@ -8,13 +8,17 @@ use Symfony\Component\Routing\Annotation\Route;
 
 class ApiControllerJson
 {
-
     #[Route("/api", name: "api")]
     public function jsonNumber(): Response
     {
         $routes = [
             "/api",
             "/api/qoute",
+            "/api/deck",
+            "/api/deck/shuffle",
+            "/api/deck/draw/{number}",
+
+
             ];
         $data = [
             'Json routes' => $routes,
@@ -29,4 +33,3 @@ class ApiControllerJson
     }
 
 }
-

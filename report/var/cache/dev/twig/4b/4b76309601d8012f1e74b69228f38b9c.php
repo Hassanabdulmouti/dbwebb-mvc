@@ -80,8 +80,22 @@ class __TwigTemplate_fe7b6a87007936fe3c8b7ba7295606ce extends Template
 
 <div id=\"kmom02\" class=\"content-wrapper\">
       
-     <h1 class=\"text-3xl font-bold\">kmom02</h1
-     <p>kmom02 report goes here</p>
+     <h1 class=\"text-3xl font-bold\">kmom02</h1>
+     <h2 class=\"font-bold\">UML modell</h2>
+       <a href=\"";
+        // line 42
+        echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("img/uml.png"), "html", null, true);
+        echo "\" target=\"\"> <img src=\"";
+        echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("img/uml.png"), "html", null, true);
+        echo "\" alt=\"UML diagram\" width= \"500\"> </a>
+     <p>
+I min studie av objektorienterade koncept i PHP har jag utforskat hur arv, komposition, interfaces och traits används. Till exempel används arv i mitt projekt där CardSessionController, CardController, och DisplayCards ärver från AbstractController. Komposition ses i hur DisplayCards innehåller en instans av CardController.    <br>
+    <br>
+
+Jag använde PlantUML för att skapa klassdiagrammet och är nöjd med resultatet. Dock ser jag potential för att ytterligare förbättra koden genom att implementera traits, vilket skulle öka modulariteten och underlätta vidare underhåll och utveckling av projektet.
+    <br>
+    <br>
+Genom att arbeta med Symfony och dess MVC-struktur har jag lärt mig vikten av att separera ansvar mellan olika delar av koden. Detta gör det enklare att underhålla och utveckla applikationen. Från detta kursmoment har jag lärt mig vikten av att tydligt visualisera och förstå klassrelationer, vilket är viktigt för att effektivt utveckla robusta webbapplikationer med PHP och Symfony.</p>
 
 </div>
 
@@ -114,8 +128,8 @@ class __TwigTemplate_fe7b6a87007936fe3c8b7ba7295606ce extends Template
 
 
 ";
-        // line 73
-        $this->loadTemplate("footer.html.twig", "report.html.twig", 73)->display($context);
+        // line 82
+        $this->loadTemplate("footer.html.twig", "report.html.twig", 82)->display($context);
         
         $__internal_5a27a8ba21ca79b61932376b2fa922d2->leave($__internal_5a27a8ba21ca79b61932376b2fa922d2_prof);
 
@@ -145,7 +159,7 @@ class __TwigTemplate_fe7b6a87007936fe3c8b7ba7295606ce extends Template
      */
     public function getDebugInfo()
     {
-        return array (  118 => 73,  45 => 2,  43 => 1,);
+        return array (  132 => 82,  87 => 42,  45 => 2,  43 => 1,);
     }
 
     public function getSourceContext()
@@ -189,8 +203,17 @@ class __TwigTemplate_fe7b6a87007936fe3c8b7ba7295606ce extends Template
 
 <div id=\"kmom02\" class=\"content-wrapper\">
       
-     <h1 class=\"text-3xl font-bold\">kmom02</h1
-     <p>kmom02 report goes here</p>
+     <h1 class=\"text-3xl font-bold\">kmom02</h1>
+     <h2 class=\"font-bold\">UML modell</h2>
+       <a href=\"{{ asset('img/uml.png') }}\" target=\"\"> <img src=\"{{ asset('img/uml.png') }}\" alt=\"UML diagram\" width= \"500\"> </a>
+     <p>
+I min studie av objektorienterade koncept i PHP har jag utforskat hur arv, komposition, interfaces och traits används. Till exempel används arv i mitt projekt där CardSessionController, CardController, och DisplayCards ärver från AbstractController. Komposition ses i hur DisplayCards innehåller en instans av CardController.    <br>
+    <br>
+
+Jag använde PlantUML för att skapa klassdiagrammet och är nöjd med resultatet. Dock ser jag potential för att ytterligare förbättra koden genom att implementera traits, vilket skulle öka modulariteten och underlätta vidare underhåll och utveckling av projektet.
+    <br>
+    <br>
+Genom att arbeta med Symfony och dess MVC-struktur har jag lärt mig vikten av att separera ansvar mellan olika delar av koden. Detta gör det enklare att underhålla och utveckla applikationen. Från detta kursmoment har jag lärt mig vikten av att tydligt visualisera och förstå klassrelationer, vilket är viktigt för att effektivt utveckla robusta webbapplikationer med PHP och Symfony.</p>
 
 </div>
 

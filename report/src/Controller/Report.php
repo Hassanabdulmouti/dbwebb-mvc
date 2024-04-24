@@ -1,5 +1,7 @@
 <?php
+
 // src/Controller/UserController.php
+
 namespace App\Controller;
 
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
@@ -13,8 +15,6 @@ class Report extends AbstractController
 
     public function test(): Response
     {
-        // the template path is the relative file path from `templates/`
         return $this->render(view:'report.html.twig');
     }
 }
-

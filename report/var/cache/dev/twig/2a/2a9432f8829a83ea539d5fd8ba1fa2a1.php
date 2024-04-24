@@ -79,9 +79,19 @@ class __TwigTemplate_e79b94904328e272ffb54b7ce66b9549 extends Template
         <svg xmlns=\"http://www.w3.org/2000/svg\" class=\"h-5 w-5\" fill=\"none\" viewBox=\"0 0 24 24\" stroke=\"currentColor\"><path stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"2\" d=\"M4 6h16M4 12h16M4 18h7\" /></svg>
       </div>
       <ul tabindex=\"0\" class=\"menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52\">
-        <li><a href=\"/\">Homepage</a></li>
-        <li><a href=\"about\">About</a></li>
-        <li><a href=\"report\">Report</a></li>
+        <li><a href=\"/\">Homepage</a></li> 
+        <li><a href=\"";
+        // line 28
+        echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("about");
+        echo "\">About</a></li> 
+        <li><a href=\"";
+        // line 29
+        echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("report");
+        echo "\">Report</a></li>
+        <li><a href=\"";
+        // line 30
+        echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("card_landing");
+        echo "\">Cards</a></li>
       </ul>
     </div>
   </div>
@@ -202,7 +212,7 @@ class __TwigTemplate_e79b94904328e272ffb54b7ce66b9549 extends Template
      */
     public function getDebugInfo()
     {
-        return array (  166 => 15,  156 => 16,  153 => 15,  143 => 14,  133 => 12,  123 => 11,  104 => 6,  72 => 17,  70 => 14,  67 => 13,  65 => 11,  59 => 8,  54 => 6,  47 => 1,);
+        return array (  176 => 15,  166 => 16,  163 => 15,  153 => 14,  143 => 12,  133 => 11,  114 => 6,  93 => 30,  89 => 29,  85 => 28,  72 => 17,  70 => 14,  67 => 13,  65 => 11,  59 => 8,  54 => 6,  47 => 1,);
     }
 
     public function getSourceContext()
@@ -233,9 +243,10 @@ class __TwigTemplate_e79b94904328e272ffb54b7ce66b9549 extends Template
         <svg xmlns=\"http://www.w3.org/2000/svg\" class=\"h-5 w-5\" fill=\"none\" viewBox=\"0 0 24 24\" stroke=\"currentColor\"><path stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"2\" d=\"M4 6h16M4 12h16M4 18h7\" /></svg>
       </div>
       <ul tabindex=\"0\" class=\"menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52\">
-        <li><a href=\"/\">Homepage</a></li>
-        <li><a href=\"about\">About</a></li>
-        <li><a href=\"report\">Report</a></li>
+        <li><a href=\"/\">Homepage</a></li> 
+        <li><a href=\"{{ path('about') }}\">About</a></li> 
+        <li><a href=\"{{ path('report') }}\">Report</a></li>
+        <li><a href=\"{{ path('card_landing') }}\">Cards</a></li>
       </ul>
     </div>
   </div>

@@ -50,9 +50,15 @@ class __TwigTemplate_9b63095a06cd1c2ecdf52218631fca16 extends Template
 
   <nav>
     <h6 class=\"footer-title\">Navigations</h6> 
-    <a class=\"link link-hover\"  href=\"/\">Home Page</a>
-    <a class=\"link link-hover\" href=\"/about\">About this page</a>
-    <a class=\"link link-hover\" href=\"/report\">Rapporter </a>
+        <a href=\"/\">Home Page</a>
+        <a href=\"";
+        // line 12
+        echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("about");
+        echo "\">About this page</a>
+       <a href=\"";
+        // line 13
+        echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("report");
+        echo "\">Rapporter</a>
   </nav> 
   <nav>
     <h6 class=\"footer-title\">Legal</h6> 
@@ -82,9 +88,17 @@ class __TwigTemplate_9b63095a06cd1c2ecdf52218631fca16 extends Template
     /**
      * @codeCoverageIgnore
      */
+    public function isTraitable()
+    {
+        return false;
+    }
+
+    /**
+     * @codeCoverageIgnore
+     */
     public function getDebugInfo()
     {
-        return array (  43 => 1,);
+        return array (  60 => 13,  56 => 12,  43 => 1,);
     }
 
     public function getSourceContext()
@@ -99,9 +113,9 @@ class __TwigTemplate_9b63095a06cd1c2ecdf52218631fca16 extends Template
 
   <nav>
     <h6 class=\"footer-title\">Navigations</h6> 
-    <a class=\"link link-hover\"  href=\"/\">Home Page</a>
-    <a class=\"link link-hover\" href=\"/about\">About this page</a>
-    <a class=\"link link-hover\" href=\"/report\">Rapporter </a>
+        <a href=\"/\">Home Page</a>
+        <a href=\"{{ path('about') }}\">About this page</a>
+       <a href=\"{{ path('report') }}\">Rapporter</a>
   </nav> 
   <nav>
     <h6 class=\"footer-title\">Legal</h6> 

@@ -1,0 +1,19 @@
+{% include 'header.html.twig' %}
+
+<div class="hero min-h-screen bg-base-200">
+  <div class="hero-content flex-col lg:flex-row">
+    <div>
+      <h1 class="text-5xl font-bold">Cards session!</h1>
+        <li><a href="{{ path('carddeck') }}">Cards</a></li>
+        <li><a href="{{ path('session_page') }}">Session</a></li>
+        <li><a href="{{ path('session_delete') }}">Session delete</a></li>
+        <li><a href="{{ path('card_deck_shuffle') }}">Shuffle cards</a></li>
+        <li><a href="{{ path('card_deck_draw') }}">Draw card</a></li>
+
+
+          
+    </div>
+  </div>
+</div>
+
+{% include 'footer.html.twig' %}

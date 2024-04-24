@@ -1,0 +1,22 @@
+{% include 'header.html.twig' %}
+
+
+<h1>Drawn Cards</h1>
+<div class="deck">
+    {% for card in drawnCards %}
+    <div class="card">
+        <img src="{{ asset('img/' ~ card.imgPath) }}" alt="{{ card.suit }} {{ card.value }}" class="card-image">
+        <p>{{ card.suit }} {{ card.value }}</p>
+    </div>
+    {% endfor %}
+</div>
+<p>Remaining Cards in Deck: {{ remaining }}</p>
+{% if deckEmpty %}
+    <p>No more cards left. Please reshuffle the deck.</p>
+    <form action="{{ path('card_deck_shuffle') }}" method="get">
+        <button type="submit" class="btn btn-primary">Reshuffle Deck</button>
+    </form>
+{% endif %}
+
+
+{% include 'footer.html.twig' %}

@@ -347,6 +347,13 @@
       <tag name="controller.service_arguments"/>
       <tag name="routing.route_loader"/>
     </service>
+    <service id="App\Controller\CardSessionController" class="App\Controller\CardSessionController" public="true" autowire="true" autoconfigure="true">
+      <tag name="controller.service_arguments"/>
+      <tag name="container.service_subscriber"/>
+      <call method="setContainer">
+        <argument type="service" id=".service_locator.jUv.zyj.App\Controller\CardSessionController"/>
+      </call>
+    </service>
     <service id="App\Entity" class="App\Entity" abstract="true">
       <tag name="container.excluded" source="in &quot;config/services.yaml&quot;"/>
     </service>
@@ -357,7 +364,16 @@
         <argument type="service" id=".service_locator.jUv.zyj.App\Controller\About"/>
       </call>
     </service>
-    <service id="App\Controller\ApiControllerJson" class="App\Controller\ApiControllerJson" autowire="true" autoconfigure="true"/>
+    <service id="App\Controller\ApiControllerJson" class="App\Controller\ApiControllerJson" public="true" autowire="true" autoconfigure="true"/>
+    <service id="App\Controller\CardController" class="App\Controller\CardController" public="true" autowire="true" autoconfigure="true"/>
+    <service id="App\Controller\DisplayCards" class="App\Controller\DisplayCards" public="true" autowire="true" autoconfigure="true">
+      <tag name="controller.service_arguments"/>
+      <tag name="container.service_subscriber"/>
+      <argument type="service" id="App\Controller\CardController"/>
+      <call method="setContainer">
+        <argument type="service" id=".service_locator.jUv.zyj.App\Controller\DisplayCards"/>
+      </call>
+    </service>
     <service id="App\Controller\Home" class="App\Controller\Home" public="true" autowire="true" autoconfigure="true">
       <tag name="controller.service_arguments"/>
       <tag name="container.service_subscriber"/>
@@ -365,7 +381,7 @@
         <argument type="service" id=".service_locator.jUv.zyj.App\Controller\Home"/>
       </call>
     </service>
-    <service id="App\Controller\LuckyControllerJson" class="App\Controller\LuckyControllerJson" autowire="true" autoconfigure="true"/>
+    <service id="App\Controller\LuckyControllerJson" class="App\Controller\LuckyControllerJson" public="true" autowire="true" autoconfigure="true"/>
     <service id="App\Controller\Report" class="App\Controller\Report" public="true" autowire="true" autoconfigure="true">
       <tag name="controller.service_arguments"/>
       <tag name="container.service_subscriber"/>
@@ -6911,15 +6927,21 @@
       <argument type="service" id="maker.security_config_updater"/>
       <argument type="service" id="maker.security_controller_builder"/>
     </service>
-    <service id=".instanceof.Symfony\Contracts\Service\ServiceSubscriberInterface.0.App\Controller\About" class="App\Controller\About" autowire="true" abstract="true"/>
-    <service id=".instanceof.Symfony\Bundle\FrameworkBundle\Controller\AbstractController.0.App\Controller\About" class="App\Controller\About" autowire="true" abstract="true"/>
-    <service id=".abstract.instanceof.App\Controller\About" class="App\Controller\About" autowire="true" autoconfigure="true" abstract="true"/>
-    <service id=".instanceof.Symfony\Contracts\Service\ServiceSubscriberInterface.0.App\Controller\Home" class="App\Controller\Home" autowire="true" abstract="true"/>
-    <service id=".instanceof.Symfony\Bundle\FrameworkBundle\Controller\AbstractController.0.App\Controller\Home" class="App\Controller\Home" autowire="true" abstract="true"/>
-    <service id=".abstract.instanceof.App\Controller\Home" class="App\Controller\Home" autowire="true" autoconfigure="true" abstract="true"/>
-    <service id=".instanceof.Symfony\Contracts\Service\ServiceSubscriberInterface.0.App\Controller\Report" class="App\Controller\Report" autowire="true" abstract="true"/>
-    <service id=".instanceof.Symfony\Bundle\FrameworkBundle\Controller\AbstractController.0.App\Controller\Report" class="App\Controller\Report" autowire="true" abstract="true"/>
-    <service id=".abstract.instanceof.App\Controller\Report" class="App\Controller\Report" autowire="true" autoconfigure="true" abstract="true"/>
+    <service id=".instanceof.Symfony\Contracts\Service\ServiceSubscriberInterface.0.App\Controller\CardSessionController" class="App\Controller\CardSessionController" public="true" autowire="true" abstract="true"/>
+    <service id=".instanceof.Symfony\Bundle\FrameworkBundle\Controller\AbstractController.0.App\Controller\CardSessionController" class="App\Controller\CardSessionController" public="true" autowire="true" abstract="true"/>
+    <service id=".abstract.instanceof.App\Controller\CardSessionController" class="App\Controller\CardSessionController" public="true" autowire="true" autoconfigure="true" abstract="true"/>
+    <service id=".instanceof.Symfony\Contracts\Service\ServiceSubscriberInterface.0.App\Controller\About" class="App\Controller\About" public="true" autowire="true" abstract="true"/>
+    <service id=".instanceof.Symfony\Bundle\FrameworkBundle\Controller\AbstractController.0.App\Controller\About" class="App\Controller\About" public="true" autowire="true" abstract="true"/>
+    <service id=".abstract.instanceof.App\Controller\About" class="App\Controller\About" public="true" autowire="true" autoconfigure="true" abstract="true"/>
+    <service id=".instanceof.Symfony\Contracts\Service\ServiceSubscriberInterface.0.App\Controller\DisplayCards" class="App\Controller\DisplayCards" public="true" autowire="true" abstract="true"/>
+    <service id=".instanceof.Symfony\Bundle\FrameworkBundle\Controller\AbstractController.0.App\Controller\DisplayCards" class="App\Controller\DisplayCards" public="true" autowire="true" abstract="true"/>
+    <service id=".abstract.instanceof.App\Controller\DisplayCards" class="App\Controller\DisplayCards" public="true" autowire="true" autoconfigure="true" abstract="true"/>
+    <service id=".instanceof.Symfony\Contracts\Service\ServiceSubscriberInterface.0.App\Controller\Home" class="App\Controller\Home" public="true" autowire="true" abstract="true"/>
+    <service id=".instanceof.Symfony\Bundle\FrameworkBundle\Controller\AbstractController.0.App\Controller\Home" class="App\Controller\Home" public="true" autowire="true" abstract="true"/>
+    <service id=".abstract.instanceof.App\Controller\Home" class="App\Controller\Home" public="true" autowire="true" autoconfigure="true" abstract="true"/>
+    <service id=".instanceof.Symfony\Contracts\Service\ServiceSubscriberInterface.0.App\Controller\Report" class="App\Controller\Report" public="true" autowire="true" abstract="true"/>
+    <service id=".instanceof.Symfony\Bundle\FrameworkBundle\Controller\AbstractController.0.App\Controller\Report" class="App\Controller\Report" public="true" autowire="true" abstract="true"/>
+    <service id=".abstract.instanceof.App\Controller\Report" class="App\Controller\Report" public="true" autowire="true" autoconfigure="true" abstract="true"/>
     <service id=".service_locator.bJ.4HC5" class="Symfony\Component\DependencyInjection\ServiceLocator">
       <tag name="container.service_locator"/>
       <argument type="collection">
@@ -7910,9 +7932,21 @@
         <argument key="web_link.http_header_serializer" type="service_closure" id="web_link.http_header_serializer" on-invalid="ignore"/>
       </argument>
     </service>
+    <service id=".service_locator.jUv.zyj.App\Controller\CardSessionController" class="Symfony\Component\DependencyInjection\ServiceLocator">
+      <tag name="container.service_locator_context" id="App\Controller\CardSessionController"/>
+      <argument>App\Controller\CardSessionController</argument>
+      <argument type="service" id="service_container"/>
+      <factory service=".service_locator.jUv.zyj" method="withContext"/>
+    </service>
     <service id=".service_locator.jUv.zyj.App\Controller\About" class="Symfony\Component\DependencyInjection\ServiceLocator">
       <tag name="container.service_locator_context" id="App\Controller\About"/>
       <argument>App\Controller\About</argument>
+      <argument type="service" id="service_container"/>
+      <factory service=".service_locator.jUv.zyj" method="withContext"/>
+    </service>
+    <service id=".service_locator.jUv.zyj.App\Controller\DisplayCards" class="Symfony\Component\DependencyInjection\ServiceLocator">
+      <tag name="container.service_locator_context" id="App\Controller\DisplayCards"/>
+      <argument>App\Controller\DisplayCards</argument>
       <argument type="service" id="service_container"/>
       <factory service=".service_locator.jUv.zyj" method="withContext"/>
     </service>
@@ -8097,7 +8131,9 @@
       <call method="allowControllers">
         <argument type="collection">
           <argument>App\Kernel</argument>
+          <argument>App\Controller\CardSessionController</argument>
           <argument>App\Controller\About</argument>
+          <argument>App\Controller\DisplayCards</argument>
           <argument>App\Controller\Home</argument>
           <argument>App\Controller\Report</argument>
           <argument>Doctrine\Bundle\DoctrineBundle\Controller\ProfilerController</argument>

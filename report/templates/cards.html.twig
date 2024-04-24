@@ -1,0 +1,12 @@
+{% include 'header.html.twig' %}
+
+<div class="deck">
+    {% for card in deck %}
+        <div class="card">
+            <h2>{{ card.suit }} {{ card.value }}</h2>
+            <img src="{{ asset('img/' ~ card.imgPath) }}" alt="{{ card.suit }} {{ card.value }}">
+        </div>
+    {% endfor %}
+</div>
+
+{% include 'footer.html.twig' %}
