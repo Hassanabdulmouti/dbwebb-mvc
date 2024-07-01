@@ -69,8 +69,6 @@ class __TwigTemplate_fe7b6a87007936fe3c8b7ba7295606ce extends Template
     <br>
     Jag värdesätter starkt användningen av ramverk i programutveckling då det främjar kodåteranvändning och förenklar underhåll. Ramverk reducerar behovet av att skriva kod från grunden genom att erbjuda förkonfigurerade moduler och funktioner, vilket effektiviserar utvecklingsprocessen och låter utvecklaren fokusera på applikationens unika funktioner. Denna metodik bidrar till en mer organiserad och lättförståelig kodbas.
      <br>
-    <br>
-    Med min begränsade erfarenhet av PHP ser jag \"PHP The Right Way\" som en viktig resurs för att lära mig om bästa praxis och moderna programmeringsstandarder. Jag är särskilt intresserad av att utforska områden som säkerhetspraxis, hantering av beroenden via Composer, samt tekniker för att skriva ren och effektiv kod. Det är avgörande för mig att tillägna mig kunskaper som gör det möjligt att skriva säker och välstrukturerad kod, och jag ser fram emot att tillämpa dessa insikter i framtida projekt.
      <br>
     <br>
     Slutligen, mitt mest betydelsefulla lärande från detta kursmoment är en fördjupad förståelse för användningen av klasser i PHP. Att lära mig om klasssyntax, hantering av objekt, samt användningen av arv och gränssnitt för att skapa flexibel och återanvändbar kod har varit särskilt berikande. Denna kunskap har inte bara utvidgat min förståelse för objektorienterad programmering utan har också förberett mig för mer avancerad programutveckling.
@@ -83,7 +81,7 @@ class __TwigTemplate_fe7b6a87007936fe3c8b7ba7295606ce extends Template
      <h1 class=\"text-3xl font-bold\">kmom02</h1>
      <h2 class=\"font-bold\">UML modell</h2>
        <a href=\"";
-        // line 42
+        // line 40
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("img/uml.png"), "html", null, true);
         echo "\" target=\"\"> <img src=\"";
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("img/uml.png"), "html", null, true);
@@ -128,8 +126,8 @@ Genom att arbeta med Symfony och dess MVC-struktur har jag lärt mig vikten av a
 
 
 ";
-        // line 82
-        $this->loadTemplate("footer.html.twig", "report.html.twig", 82)->display($context);
+        // line 80
+        $this->loadTemplate("footer.html.twig", "report.html.twig", 80)->display($context);
         
         $__internal_5a27a8ba21ca79b61932376b2fa922d2->leave($__internal_5a27a8ba21ca79b61932376b2fa922d2_prof);
 
@@ -159,7 +157,7 @@ Genom att arbeta med Symfony och dess MVC-struktur har jag lärt mig vikten av a
      */
     public function getDebugInfo()
     {
-        return array (  132 => 82,  87 => 42,  45 => 2,  43 => 1,);
+        return array (  130 => 80,  85 => 40,  45 => 2,  43 => 1,);
     }
 
     public function getSourceContext()
@@ -192,8 +190,6 @@ Genom att arbeta med Symfony och dess MVC-struktur har jag lärt mig vikten av a
     <br>
     Jag värdesätter starkt användningen av ramverk i programutveckling då det främjar kodåteranvändning och förenklar underhåll. Ramverk reducerar behovet av att skriva kod från grunden genom att erbjuda förkonfigurerade moduler och funktioner, vilket effektiviserar utvecklingsprocessen och låter utvecklaren fokusera på applikationens unika funktioner. Denna metodik bidrar till en mer organiserad och lättförståelig kodbas.
      <br>
-    <br>
-    Med min begränsade erfarenhet av PHP ser jag \"PHP The Right Way\" som en viktig resurs för att lära mig om bästa praxis och moderna programmeringsstandarder. Jag är särskilt intresserad av att utforska områden som säkerhetspraxis, hantering av beroenden via Composer, samt tekniker för att skriva ren och effektiv kod. Det är avgörande för mig att tillägna mig kunskaper som gör det möjligt att skriva säker och välstrukturerad kod, och jag ser fram emot att tillämpa dessa insikter i framtida projekt.
      <br>
     <br>
     Slutligen, mitt mest betydelsefulla lärande från detta kursmoment är en fördjupad förståelse för användningen av klasser i PHP. Att lära mig om klasssyntax, hantering av objekt, samt användningen av arv och gränssnitt för att skapa flexibel och återanvändbar kod har varit särskilt berikande. Denna kunskap har inte bara utvidgat min förståelse för objektorienterad programmering utan har också förberett mig för mer avancerad programutveckling.

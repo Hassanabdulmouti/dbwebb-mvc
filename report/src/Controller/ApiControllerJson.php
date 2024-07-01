@@ -12,11 +12,12 @@ class ApiControllerJson
     public function jsonNumber(): Response
     {
         $routes = [
-            "/api",
-            "/api/qoute",
-            "/api/deck",
-            "/api/deck/shuffle",
-            "/api/deck/draw/{number}",
+            "api",
+            "lucky",
+            "quote",
+            "api/deck",
+            "api/deck/shuffle",
+            "api/deck/draw/{number}",
 
 
             ];

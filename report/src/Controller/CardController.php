@@ -13,7 +13,7 @@ class CardController
     public function cards(): Response
     {
         $deck = [
-            ["suit" => "spades", "value" => "Ace", "imgPath" => "spades_Ace.svg"],
+            ["suit" => "spades", "value" => "Ace", "imgPath" => "spades_ace.svg"],
             ["suit" => "spades", "value" => "2", "imgPath" => "spades_2.svg"],
             ["suit" => "spades", "value" => "3", "imgPath" => "spades_3.svg"],
             ["suit" => "spades", "value" => "4", "imgPath" => "spades_4.svg"],
@@ -23,14 +23,14 @@ class CardController
             ["suit" => "spades", "value" => "8", "imgPath" => "spades_8.svg"],
             ["suit" => "spades", "value" => "9", "imgPath" => "spades_9.svg"],
             ["suit" => "spades", "value" => "10", "imgPath" => "spades_10.svg"],
-            ["suit" => "spades", "value" => "Jack", "imgPath" => "spades_Jack.svg"],
-            ["suit" => "spades", "value" => "Queen", "imgPath" => "spades_Queen.svg"],
-            ["suit" => "spades", "value" => "King", "imgPath" => "spades_King.svg"]
+            ["suit" => "spades", "value" => "Jack", "imgPath" => "spades_jack.svg"],
+            ["suit" => "spades", "value" => "Queen", "imgPath" => "spades_queen.svg"],
+            ["suit" => "spades", "value" => "King", "imgPath" => "spades_king.svg"]
         ];
 
         // Extend the deck with other suits: hearts, diamonds, clubs
         foreach (['hearts', 'diamonds', 'clubs'] as $suit) {
-            foreach (['Ace', '2', '3', '4', '5', '6', '7', '8', '9', '10', 'Jack', 'Queen', 'King'] as $value) {
+            foreach (['ace', '2', '3', '4', '5', '6', '7', '8', '9', '10', 'jack', 'queen', 'king'] as $value) {
                 $deck[] = ["suit" => $suit, "value" => $value, "imgPath" => "{$suit}_{$value}.svg"];
             }
         }

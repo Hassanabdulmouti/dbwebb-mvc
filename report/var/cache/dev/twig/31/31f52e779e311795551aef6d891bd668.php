@@ -54,7 +54,7 @@ class __TwigTemplate_989ac80b1d4ced256f2c1182ce122de5 extends Template
     <div class=\"image-container\">
       <img src=\"";
         // line 12
-        echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("img/symfony.png"), "html", null, true);
+        echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("img/Symfony.png"), "html", null, true);
         echo "\" alt=\"symfony 7\" style=\"width: 300px;\">
     </div>
   </div>
@@ -108,7 +108,7 @@ class __TwigTemplate_989ac80b1d4ced256f2c1182ce122de5 extends Template
       </p>
     </div>
     <div class=\"image-container\">
-      <img src=\"{{ asset('img/symfony.png') }}\" alt=\"symfony 7\" style=\"width: 300px;\">
+      <img src=\"{{ asset('img/Symfony.png') }}\" alt=\"symfony 7\" style=\"width: 300px;\">
     </div>
   </div>
 </div>

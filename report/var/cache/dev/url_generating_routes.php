@@ -25,7 +25,8 @@ return [
     'session_page' => [[], ['_controller' => 'App\\Controller\\CardSessionController::sessionPage'], [], [['text', '/session']], [], [], []],
     'carddeck' => [[], ['_controller' => 'App\\Controller\\DisplayCards::display'], [], [['text', '/card/deck']], [], [], []],
     'home' => [[], ['_controller' => 'App\\Controller\\Home::test'], [], [['text', '/']], [], [], []],
-    'api_qoute' => [[], ['_controller' => 'App\\Controller\\LuckyControllerJson::jsonNumber'], [], [['text', '/api/qoute']], [], [], []],
+    'lucky' => [[], ['_controller' => 'App\\Controller\\LuckyController::number'], [], [['text', '/lucky']], [], [], []],
+    'quote' => [[], ['_controller' => 'App\\Controller\\QuoteControllerJson::jsonNumber'], [], [['text', '/quote']], [], [], []],
     'report' => [[], ['_controller' => 'App\\Controller\\Report::test'], [], [['text', '/report']], [], [], []],
     'card_landing' => [[], ['_controller' => 'App\\Controller\\CardSessionController::landingPage'], [], [['text', '/card']], [], [], []],
     'session_content' => [[], ['_controller' => 'App\\Controller\\CardSessionController::sessionPage'], [], [['text', '/session']], [], [], []],
@@ -47,6 +48,7 @@ return [
     'App\Controller\CardSessionController::drawMultipleCards' => [['number'], ['_controller' => 'App\\Controller\\CardSessionController::drawMultipleCards'], ['number' => '\\d+'], [['variable', '/', '\\d+', 'number', true], ['text', '/card/deck/draw']], [], [], []],
     'App\Controller\DisplayCards::display' => [[], ['_controller' => 'App\\Controller\\DisplayCards::display'], [], [['text', '/card/deck']], [], [], []],
     'App\Controller\Home::test' => [[], ['_controller' => 'App\\Controller\\Home::test'], [], [['text', '/']], [], [], []],
-    'App\Controller\LuckyControllerJson::jsonNumber' => [[], ['_controller' => 'App\\Controller\\LuckyControllerJson::jsonNumber'], [], [['text', '/api/qoute']], [], [], []],
+    'App\Controller\LuckyController::number' => [[], ['_controller' => 'App\\Controller\\LuckyController::number'], [], [['text', '/lucky']], [], [], []],
+    'App\Controller\QuoteControllerJson::jsonNumber' => [[], ['_controller' => 'App\\Controller\\QuoteControllerJson::jsonNumber'], [], [['text', '/quote']], [], [], []],
     'App\Controller\Report::test' => [[], ['_controller' => 'App\\Controller\\Report::test'], [], [['text', '/report']], [], [], []],
 ];

@@ -1,0 +1,17 @@
+{% include 'header.html.twig' %}
+
+<div class="content-container">
+  <div class="flex-container">
+    <div class="text-content">
+      <h1 class="text-3xl font-bold">Lucky number</h1>
+      <p> 
+        Your lucky number is {{ number }}.
+      </p>
+    </div>
+    <div class="image-container">
+      <img src="{{ asset('img/emoji.png') }}" alt="symfony 7" style="width: 300px;">
+    </div>
+  </div>
+</div>
+
+{% include 'footer.html.twig' %}

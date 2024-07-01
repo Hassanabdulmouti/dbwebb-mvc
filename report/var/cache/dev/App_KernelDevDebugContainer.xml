@@ -381,7 +381,14 @@
         <argument type="service" id=".service_locator.jUv.zyj.App\Controller\Home"/>
       </call>
     </service>
-    <service id="App\Controller\LuckyControllerJson" class="App\Controller\LuckyControllerJson" public="true" autowire="true" autoconfigure="true"/>
+    <service id="App\Controller\LuckyController" class="App\Controller\LuckyController" public="true" autowire="true" autoconfigure="true">
+      <tag name="controller.service_arguments"/>
+      <tag name="container.service_subscriber"/>
+      <call method="setContainer">
+        <argument type="service" id=".service_locator.jUv.zyj.App\Controller\LuckyController"/>
+      </call>
+    </service>
+    <service id="App\Controller\QuoteControllerJson" class="App\Controller\QuoteControllerJson" public="true" autowire="true" autoconfigure="true"/>
     <service id="App\Controller\Report" class="App\Controller\Report" public="true" autowire="true" autoconfigure="true">
       <tag name="controller.service_arguments"/>
       <tag name="container.service_subscriber"/>
@@ -6939,6 +6946,9 @@
     <service id=".instanceof.Symfony\Contracts\Service\ServiceSubscriberInterface.0.App\Controller\Home" class="App\Controller\Home" public="true" autowire="true" abstract="true"/>
     <service id=".instanceof.Symfony\Bundle\FrameworkBundle\Controller\AbstractController.0.App\Controller\Home" class="App\Controller\Home" public="true" autowire="true" abstract="true"/>
     <service id=".abstract.instanceof.App\Controller\Home" class="App\Controller\Home" public="true" autowire="true" autoconfigure="true" abstract="true"/>
+    <service id=".instanceof.Symfony\Contracts\Service\ServiceSubscriberInterface.0.App\Controller\LuckyController" class="App\Controller\LuckyController" public="true" autowire="true" abstract="true"/>
+    <service id=".instanceof.Symfony\Bundle\FrameworkBundle\Controller\AbstractController.0.App\Controller\LuckyController" class="App\Controller\LuckyController" public="true" autowire="true" abstract="true"/>
+    <service id=".abstract.instanceof.App\Controller\LuckyController" class="App\Controller\LuckyController" public="true" autowire="true" autoconfigure="true" abstract="true"/>
     <service id=".instanceof.Symfony\Contracts\Service\ServiceSubscriberInterface.0.App\Controller\Report" class="App\Controller\Report" public="true" autowire="true" abstract="true"/>
     <service id=".instanceof.Symfony\Bundle\FrameworkBundle\Controller\AbstractController.0.App\Controller\Report" class="App\Controller\Report" public="true" autowire="true" abstract="true"/>
     <service id=".abstract.instanceof.App\Controller\Report" class="App\Controller\Report" public="true" autowire="true" autoconfigure="true" abstract="true"/>
@@ -7956,6 +7966,12 @@
       <argument type="service" id="service_container"/>
       <factory service=".service_locator.jUv.zyj" method="withContext"/>
     </service>
+    <service id=".service_locator.jUv.zyj.App\Controller\LuckyController" class="Symfony\Component\DependencyInjection\ServiceLocator">
+      <tag name="container.service_locator_context" id="App\Controller\LuckyController"/>
+      <argument>App\Controller\LuckyController</argument>
+      <argument type="service" id="service_container"/>
+      <factory service=".service_locator.jUv.zyj" method="withContext"/>
+    </service>
     <service id=".service_locator.jUv.zyj.App\Controller\Report" class="Symfony\Component\DependencyInjection\ServiceLocator">
       <tag name="container.service_locator_context" id="App\Controller\Report"/>
       <argument>App\Controller\Report</argument>
@@ -8135,6 +8151,7 @@
           <argument>App\Controller\About</argument>
           <argument>App\Controller\DisplayCards</argument>
           <argument>App\Controller\Home</argument>
+          <argument>App\Controller\LuckyController</argument>
           <argument>App\Controller\Report</argument>
           <argument>Doctrine\Bundle\DoctrineBundle\Controller\ProfilerController</argument>
         </argument>
