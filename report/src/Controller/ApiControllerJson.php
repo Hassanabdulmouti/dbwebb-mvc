@@ -13,7 +13,6 @@ class ApiControllerJson
     {
         $routes = [
             "api",
-            "lucky",
             "quote",
             "api/deck",
             "api/deck/shuffle",
